@@ -1,3 +1,58 @@
-header{
-    color:red;
+/* Стиль для всего */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; /*внешний отступ*/
+    padding: 0; /*внутренний отступ */
+}
+
+.logo{
+    max-width: 100px;
+}
+
+header {
+    height: 124px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.header-box {
+    height: 100%;
+    display: flex; /* поведение блоков уникально*/
+    align-items: center; /* элементы находятся в центре */
+    justify-content: space-between; /*элементы разделены между собой*/
+}
+
+.main {
+
+}
+
+.footer {
+    height: 156px;
+}
+
+.footer-box {
+    height: 100%;
+    display: flex; /* поведение блоков уникально*/
+    align-items: center; /* элементы находятся в центре */
+    justify-content: space-between; /*элементы разделены между собой*/
+}
+
+.footer-nav{
+    flex-grow: 1; /*свойство контролирует насколько растянется элемент*/
+}
+
+
+.container {
+    height: 100%; /*Занимает всю высоту родителя (header) */
+    max-width: 1230px;
+    margin: 0 auto; /*контейнер будет сам расширяться и сужаться*/
+
+    /*Отступы слева и справа */
+    padding-left: 15px;
+    padding-right: 15px;
 }
