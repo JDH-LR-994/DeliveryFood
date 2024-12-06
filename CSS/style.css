@@ -1,6 +1,9 @@
 /* Стиль для всего */
 * {
     box-sizing: border-box;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal;
 }
 
 body {
@@ -8,12 +11,55 @@ body {
     padding: 0; /*внутренний отступ */
 }
 
-.logo{
+.container {
+    width: 100%;
+    height: 100%; /*Занимает всю высоту родителя (header) */
+    max-width: 1230px;
+    margin: 0 auto; /*контейнер будет сам расширяться и сужаться*/
+
+    /*Отступы слева и справа */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column; /*выстраиваем дочернии элементы в колонку*/
+    min-height: 100vh; /*минимальная высота - весь экран*/
+}
+
+.btn {
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 4px; /*выстраивает разрыв между flex элементами*/
+    outline: none; /*без обводки*/
+}
+
+.btn-primary {
+    border-radius: 2px;
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    color: #FFFFFF;
+}
+
+.btn-outline {
+    border-radius: 2px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.00);
+    color: #595959;
+
+}
+
+.logo {
     max-width: 100px;
 }
 
 header {
-    height: 124px;
+    display: flex;
+    min-height: 124px;
+    align-items: center;
 }
 
 .logo img {
@@ -27,12 +73,23 @@ header {
     justify-content: space-between; /*элементы разделены между собой*/
 }
 
-.main {
+.header-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /*От конца идут влево*/
+    gap: 10px;
+}
 
+.main {
+    flex-grow: 1;
+    background: linear-gradient(180deg, rgb(245, 245, 245, 0.00) 1.04%, #F5F5F5 100%); /* заливка от серого до белого */
 }
 
 .footer {
-    height: 156px;
+    display: flex;
+    min-height: 156px;
+    align-items: center;
+    padding: 60px 0;
 }
 
 .footer-box {
@@ -40,19 +97,114 @@ header {
     display: flex; /* поведение блоков уникально*/
     align-items: center; /* элементы находятся в центре */
     justify-content: space-between; /*элементы разделены между собой*/
+    gap: 36px;
+    flex-wrap: wrap; /* перенос элементов при уменьшении ширины экрана*/
 }
 
-.footer-nav{
+.footer-nav {
     flex-grow: 1; /*свойство контролирует насколько растянется элемент*/
 }
 
+.footer-nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-.container {
-    height: 100%; /*Занимает всю высоту родителя (header) */
-    max-width: 1230px;
-    margin: 0 auto; /*контейнер будет сам расширяться и сужаться*/
+.footer-nav ul li {
+    color: #595959;
+    font-size: 18px;
+    font-weight: 400;
+}
 
-    /*Отступы слева и справа */
-    padding-left: 15px;
-    padding-right: 15px;
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+
+.banner {
+    margin: 56px;
+}
+
+.banner-item {
+    background-image: url("../images/banners/banner.jpg"); /* изображение на фоне*/
+    background-repeat: no-repeat;
+    background-size: cover; /* картинка растягивается */
+    background-position: center right;
+    padding: 68px;
+    border-radius: 10px; /* округление*/
+}
+
+.banner-item--title {
+    color: #302C34;
+    font-size: 39px;
+    font-weight: 700;
+    max-width: 50%;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.banner-item--subtitle {
+    color: #302C34;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 50%;
+    margin: 0;
+}
+
+.products {
+    display: flex;
+}
+
+.products-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-header--title {
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.products-header--search {
+    min-width: 306px;
+    height: 34px;
+    border-radius: 2px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    padding: 5px 12px;
+
+}
+
+.products-header--search:focus {
+    outline: none;
+    border: 1px solid #D9D9D9;
+}
+
+/* псевдо-элемент*/
+.products-header--search::placeholder {
+    color: #D9D9D9;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* при такой ширине меняются стили*/
+@media (max-width: 991px) {
+    .banner-item--title {
+        max-width: 100%;
+    }
+
+    .banner-item--subtitle {
+        max-width: 100%;
+    }
 }

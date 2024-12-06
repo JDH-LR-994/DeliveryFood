@@ -3,52 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Шрифт Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Мои стили -->
     <link rel="stylesheet" href="../CSS/style.css">
     <title>Delivery Food</title>
 </head>
 <body>
-<header class="header">
-    <!--Шапка сайта-->
-    <div class="container">
-        <div class="header-box">
-            <!-- общий ящик для шапки-->
-            <div class="header-logo logo">
-                <!-- Здесь будет лого -->
-                <img src="../Images/logo.png" alt="logo">
-            </div>
-            <div class="header-controls">
-                <!-- Здесь что-то будет-->
+<div class="page-wrapper">
+    <header class="header">
+        <!--Шапка сайта-->
+        <div class="container">
+            <div class="header-box">
+                <!-- общий ящик для шапки-->
+                <div class="header-logo logo">
+                    <!-- Здесь будет лого -->
+                    <img src="../images/logo.png" alt="logo">
+                </div>
+                <div class="header-controls">
+                    <!-- Здесь что-то будет-->
+                    <button class="btn btn-primary">
+                        <img src="../images/icons/user.png" alt="user">
+                        Войти
+                    </button>
+                    <button class="btn btn-outline">
+                        <img src="../images/icons/shopping%20cart.png" alt="cart">
+                        Корзина
+                    </button>
 
+                </div>
             </div>
         </div>
-    </div>
-    header
-</header>
-<main class="main">
-    <!--Здесь находится основной контент сайта -->
-    <div class="container">
-        <!--контейнер для еды -->
-    </div>
-</main>
-<footer class="footer">
-    <!--Подвал сайта-->
-    <div class="container">
-        <div class="footer-box">
-            <!-- общий ящик для подвала -->
-            <div class="footer-logo logo">
-                <!--Здесь будет лого-->
-                <img src="../Images/logo.png" alt="logo">
+    </header>
+    <main class="main">
+        <!--Здесь находится основной контент сайта -->
+        <section class="banner">
+            <div class="container">
+                <!--контейнер для еды -->
+                <div class="banner-item">
+                    <h2 class="banner-item--title">
+                        Онлайн-сервис<br>доставки еды на дом
+                    </h2>
+                    <p class="banner-item--subtitle">
+                        Блюда из любимого ресторана привезёт курьер в перчатках, в маске и с антисептиком
+                    </p>
+                </div>
             </div>
-            <div class="footer-nav">
-                <!-- Здесь будет навигация-->
+        </section>
+        <section class="products">
+            <div class="container">
+                <!--контейнер для еды -->
+                <div class="products-header">
+                    <h3 class="products-header--title">
+                        Рестораны
+                    </h3>
+
+                    <input
+                            type="text"
+                            class="products-header--search"
+                            placeholder="Поиск блюд и ресторанов"
+                    >
+
+                </div>
             </div>
-            <div class="footer-social">
-                <!-- Здесь будут ссылки на соц сети -->
+        </section>
+    </main>
+    <footer class="footer">
+        <!--Подвал сайта-->
+        <div class="container">
+            <div class="footer-box">
+                <!-- общий ящик для подвала -->
+                <div class="footer-logo logo">
+                    <!--Здесь будет лого-->
+                    <img src="../images/logo.png" alt="logo">
+                </div>
+                <div class="footer-nav">
+                    <!-- Здесь будет навигация-->
+                    <ul>
+                        <li>Ресторанами</li>
+                        <li>Курьерам</li>
+                        <li>Пресс-центры</li>
+                        <li>Контакты</li>
+
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <img src="../images/social/Instagramm.png" alt="instagram">
+                    <img src="../images/social/Facebook.png" alt="facebook">
+                    <img src="../images/social/VK.png" alt="VK">
+                    <!-- Здесь будут ссылки на соц сети -->
+                </div>
             </div>
+
         </div>
 
-    </div>
-
-</footer>
+    </footer>
+</div>
 </body>
 </html>
