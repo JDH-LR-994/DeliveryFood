@@ -167,12 +167,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
 .products-header--title {
     color: #000;
     font-size: 36px;
     font-weight: 700;
+    margin: 0;
 }
 
 .products-header--search {
@@ -198,6 +201,38 @@ header {
     line-height: 24px;
 }
 
+.products-wrapper {
+    margin-top: 44px;
+    margin-bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.products-card {
+    width: calc((100% - 48px) / 3);
+    border-radius: 7px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    outline: hidden; /* обрезание по округлению */
+}
+
+.products-card__image {
+    width: 100%;
+}
+
+.products-card__image img {
+    width: 100%;
+}
+.products-card__description{
+    padding: 20px 24px 34px 24px;
+}
+
+.products-card__description-row{
+    display: flex;
+    align-items: center; /*все элементы должны быть по центру*/
+    justify-content: space-between;
+}
 /* при такой ширине меняются стили*/
 @media (max-width: 991px) {
     .banner-item--title {
@@ -206,5 +241,32 @@ header {
 
     .banner-item--subtitle {
         max-width: 100%;
+    }
+
+    .products-card {
+        width: calc((100% - 24px) / 2);
+    }
+}
+.products-card__description--title{
+
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+}
+.products-card__description--badge{
+    color: #FFFFFF;
+    border-radius: 2px;
+    background: #262626;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 1px 8px;
+}
+@media (max-width: 576px) {
+
+    .products-card {
+        width: 100%;
     }
 }
